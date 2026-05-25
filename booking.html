@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Slot - EvConnect</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="stations.html">Find Stations</a>
+                <a href="booking.html" class="active">Book a Slot</a>
+                <a href="about.html">About Us</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="hero-bg">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+        </div>
+        <div class="container">
+            <span class="section-label">📅 Booking</span>
+            <h1>Book a Charging Slot</h1>
+            <p>Reserve your charging slot in advance. Quick, easy, and hassle-free.</p>
+        </div>
+    </div>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-layout">
+                <div class="booking-form-wrap">
+                    <div class="stepper">
+                        <div class="step-dot active">
+                            <span>1</span>
+                            <p>Select Station</p>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step-dot">
+                            <span>2</span>
+                            <p>Choose Time</p>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step-dot">
+                            <span>3</span>
+                            <p>Confirm</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Select Station -->
+                    <div class="form-step active" id="step1">
+                        <h2>Select Charging Station</h2>
+                        <p class="step-sub">Choose from our network of charging stations across Sri Lanka</p>
+
+                        <div class="station-picker">
+                            <div class="sp-card selected" data-station="Colombo City Center">
+                                <div class="sp-left">
+                                    <span class="sp-icon">⚡</span>
+                                    <div>
+                                        <div class="sp-name">Colombo City Center</div>
+                                        <div class="sp-addr">No. 123, Union Place, Colombo 02</div>
+                                    </div>
+                                </div>
+                                <div class="sp-right">
+                                    <span class="sp-avail">4 ports free</span>
+                                    <span class="sp-check">✓</span>
+                                </div>
+                            </div>
+                            <div class="sp-card" data-station="Kandy City Center">
+                                <div class="sp-left">
+                                    <span class="sp-icon">⚡</span>
+                                    <div>
+                                        <div class="sp-name">Kandy City Center</div>
+                                        <div class="sp-addr">Kandy City Center, Dalada Veediya</div>
+                                    </div>
+                                </div>
+                                <div class="sp-right">
+                                    <span class="sp-avail">2 ports free</span>
+                                    <span class="sp-check">✓</span>
+                                </div>
+                            </div>
+                            <div class="sp-card" data-station="One Galleface Mall">
+                                <div class="sp-left">
+                                    <span class="sp-icon">⚡</span>
+                                    <div>
+                                        <div class="sp-name">One Galleface Mall</div>
+                                        <div class="sp-addr">Galle Road, Colombo 7</div>
+                                    </div>
+                                </div>
+                                <div class="sp-right">
+                                    <span class="sp-avail">3 ports free</span>
+                                    <span class="sp-check">✓</span>
+                                </div>
+                            </div>
+                            <div class="sp-card" data-station="Negombo Beach Road">
+                                <div class="sp-left">
+                                    <span class="sp-icon">⚡</span>
+                                    <div>
+                                        <div class="sp-name">Negombo Beach Road</div>
+                                        <div class="sp-addr">Lewis Place, Negombo</div>
+                                    </div>
+                                </div>
+                                <div class="sp-right">
+                                    <span class="sp-avail">2 ports free</span>
+                                    <span class="sp-check">✓</span>
+                                </div>
+                            </div>
+                            <div class="sp-card" data-station="Matale Highway Stop">
+                                <div class="sp-left">
+                                    <span class="sp-icon">⚡</span>
+                                    <div>
+                                        <div class="sp-name">Matale Highway Stop</div>
+                                        <div class="sp-addr">Kandy Road, Matale</div>
+                                    </div>
+                                </div>
+                                <div class="sp-right">
+                                    <span class="sp-avail">3 ports free</span>
+                                    <span class="sp-check">✓</span>
+                                </div>
+                            </div>
+                            <div class="sp-card" data-station="Galle Fort">
+                                <div class="sp-left">
+                                    <span class="sp-icon">⚡</span>
+                                    <div>
+                                        <div class="sp-name">Galle Fort</div>
+                                        <div class="sp-addr">Main Street, Galle</div>
+                                    </div>
+                                </div>
+                                <div class="sp-right">
+                                    <span class="sp-avail">1 port free</span>
+                                    <span class="sp-check">✓</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn-primary" onclick="nextStep()">Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Choose Time -->
+                    <div class="form-step" id="step2" style="display: none;">
+                        <h2>Choose Date & Time</h2>
+                        <p class="step-sub">Select your preferred charging time</p>
+
+                        <div class="form-group">
+                            <label>Select Date</label>
+                            <input type="date" class="form-control" id="bookDate" required>
+                            <small class="error-message" id="dateError" style="color: #ef4444; font-size: 12px; display: none;"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Available Time Slots</label>
+                            <div class="time-slots">
+                                <span class="time-slot available" onclick="selectSlot(this, '9:00 AM')">9:00 AM</span>
+                                <span class="time-slot available" onclick="selectSlot(this, '10:00 AM')">10:00 AM</span>
+                                <span class="time-slot selected" onclick="selectSlot(this, '11:00 AM')">11:00 AM</span>
+                                <span class="time-slot available" onclick="selectSlot(this, '12:00 PM')">12:00 PM</span>
+                                <span class="time-slot taken">1:00 PM</span>
+                                <span class="time-slot available" onclick="selectSlot(this, '2:00 PM')">2:00 PM</span>
+                                <span class="time-slot available" onclick="selectSlot(this, '3:00 PM')">3:00 PM</span>
+                                <span class="time-slot available" onclick="selectSlot(this, '4:00 PM')">4:00 PM</span>
+                            </div>
+                            <div class="slot-legend">
+                                <span><span class="sl-dot green"></span> Selected</span>
+                                <span><span class="sl-dot gray"></span> Available</span>
+                                <span><span class="sl-dot blue"></span> Taken</span>
+                            </div>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn-ghost" onclick="prevStep()">Back</button>
+                            <button type="button" class="btn-primary" onclick="nextStep()">Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Confirm -->
+                    <div class="form-step" id="step3" style="display: none;">
+                        <h2>Confirm Booking</h2>
+                        <p class="step-sub">Review your booking details</p>
+
+                        <div class="form-group">
+                            <label>Select Connector Type</label>
+                            <div class="connector-picker">
+                                <div class="conn-btn selected" onclick="selectConn(this, 'CCS2')">
+                                    <span class="conn-icon">🔌</span>
+                                    <span>CCS2</span>
+                                </div>
+                                <div class="conn-btn" onclick="selectConn(this, 'Type 2')">
+                                    <span class="conn-icon">🔌</span>
+                                    <span>Type 2</span>
+                                </div>
+                                <div class="conn-btn" onclick="selectConn(this, 'CHAdeMO')">
+                                    <span class="conn-icon">🔌</span>
+                                    <span>CHAdeMO</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Vehicle Details</label>
+                            <div class="form-grid">
+                                <input type="text" class="form-control" placeholder="Vehicle Model">
+                                <input type="text" class="form-control" placeholder="License Plate">
+                            </div>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn-ghost" onclick="prevStep()">Back</button>
+                            <button type="button" class="btn-primary btn-confirm" onclick="confirmBooking()">Confirm Booking</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Booking Summary</h3>
+                        <div class="summary-line">
+                            <span>Station</span>
+                            <span id="sum-station">Colombo City Center</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Date</span>
+                            <span id="sum-date">May 26, 2025</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Time</span>
+                            <span id="sum-time">11:00 AM - 12:00 PM</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Connector</span>
+                            <span id="sum-conn">CCS2 (50kW)</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-line total">
+                            <span>Estimated Cost</span>
+                            <span id="sum-cost">Rs. 45.00</span>
+                        </div>
+                        <div class="summary-note">*Final cost may vary based on actual charging time</div>
+                    </div>
+
+                    <div class="sidebar-card tips">
+                        <h3>💡 Pro Tips</h3>
+                        <ul>
+                            <li>Arrive 5 minutes before your slot</li>
+                            <li>Bring your charging cable if required</li>
+                            <li>Download our app for real-time updates</li>
+                            <li>Contact support if you need to cancel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+                    <p>Sri Lanka's smartest EV charging network. Find, book, and charge — all in one place.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="stations.html">Find Stations</a>
+                    <a href="booking.html">Book a Slot</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📧 hello@evconnect.lk</p>
+                    <p>📞 +94 75 396 6006</p>
+                    <p>📍 Colombo, Sri Lanka</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EvConnect. All rights reserved.</p>
+                <p>Made with ⚡ for Sri Lanka's EV revolution.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal">
+            <div class="success-modal">
+                <div class="success-icon">✅</div>
+                <h2>Booking Confirmed!</h2>
+                <p>Your charging slot has been successfully reserved.</p>
+                <div class="success-details" id="successDetails">
+                    <span><strong>Station:</strong> <span>Colombo City Center</span></span>
+                    <span><strong>Date & Time:</strong> <span>May 26, 2025, 11:00 AM</span></span>
+                    <span><strong>Connector:</strong> <span>CCS2 (50kW)</span></span>
+                    <span><strong>Est. Cost:</strong> <span>Rs. 45.00</span></span>
+                </div>
+                <div class="success-ref">
+                    Reference: <strong id="bookingRef">EVC-XXXXXX</strong>
+                </div>
+                <div class="success-actions">
+                    <a href="feedback.html" class="btn-primary">Leave Feedback</a>
+                    <a href="stations.html" class="btn-ghost">Find More Stations</a>
+                    <a href="index.html" class="btn-ghost">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

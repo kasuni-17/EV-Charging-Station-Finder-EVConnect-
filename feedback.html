@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - EvConnect</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="stations.html">Find Stations</a>
+                <a href="booking.html">Book a Slot</a>
+                <a href="about.html">About Us</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="hero-bg">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+        </div>
+        <div class="container">
+            <span class="section-label">⭐ Feedback</span>
+            <h1>Share Your Experience</h1>
+            <p>Help us improve our charging services by sharing your feedback.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="feedback-container">
+                <div class="feedback-card">
+                    <h2>Rate Your Charging Experience</h2>
+                    <p class="feedback-sub">Tell us about your recent charging session</p>
+                    
+                    <form class="feedback-form" id="feedbackForm">
+                        <div class="form-group">
+                            <label>Booking Reference</label>
+                            <input type="text" class="form-control" id="bookingRef" placeholder="e.g., EVC-ABC123" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Station Name</label>
+                            <select class="form-control" id="stationName" required>
+                                <option value="">Select Station</option>
+                                <option value="Colombo City Center">Colombo City Center</option>
+                                <option value="Kandy City Center">Kandy City Center</option>
+                                <option value="One Galleface Mall">One Galleface Mall</option>
+                                <option value="Negombo Beach Road">Negombo Beach Road</option>
+                                <option value="Matale Highway Stop">Matale Highway Stop</option>
+                                <option value="Galle Fort">Galle Fort</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Overall Rating</label>
+                            <div class="star-rating" id="starRating">
+                                <span class="star" data-rating="1">⭐</span>
+                                <span class="star" data-rating="2">⭐</span>
+                                <span class="star" data-rating="3">⭐</span>
+                                <span class="star" data-rating="4">⭐</span>
+                                <span class="star" data-rating="5">⭐</span>
+                            </div>
+                            <input type="hidden" id="ratingValue" value="0">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Charging Speed</label>
+                            <div class="rating-options">
+                                <label class="radio-label">
+                                    <input type="radio" name="chargingSpeed" value="excellent" required>
+                                    <span>Excellent</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="chargingSpeed" value="good">
+                                    <span>Good</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="chargingSpeed" value="average">
+                                    <span>Average</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="chargingSpeed" value="poor">
+                                    <span>Poor</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Station Cleanliness</label>
+                            <div class="rating-options">
+                                <label class="radio-label">
+                                    <input type="radio" name="cleanliness" value="excellent" required>
+                                    <span>Excellent</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="cleanliness" value="good">
+                                    <span>Good</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="cleanliness" value="average">
+                                    <span>Average</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="cleanliness" value="poor">
+                                    <span>Poor</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Staff Friendliness</label>
+                            <div class="rating-options">
+                                <label class="radio-label">
+                                    <input type="radio" name="staffFriendliness" value="excellent" required>
+                                    <span>Excellent</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="staffFriendliness" value="good">
+                                    <span>Good</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="staffFriendliness" value="average">
+                                    <span>Average</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="staffFriendliness" value="poor">
+                                    <span>Poor</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Your Comments</label>
+                            <textarea class="form-control" id="comments" rows="4" placeholder="Tell us more about your experience..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Would you recommend us?</label>
+                            <div class="rating-options">
+                                <label class="radio-label">
+                                    <input type="radio" name="recommend" value="yes" required>
+                                    <span>Yes, definitely</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="recommend" value="maybe">
+                                    <span>Maybe</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="recommend" value="no">
+                                    <span>No</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-full">Submit Feedback</button>
+                    </form>
+                </div>
+                
+                <div class="feedback-info">
+                    <h3>Why Your Feedback Matters</h3>
+                    <ul class="feedback-benefits">
+                        <li>
+                            <span class="benefit-icon">🎯</span>
+                            <div>
+                                <strong>Improve Service</strong>
+                                <p>Your feedback helps us identify areas for improvement</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">⭐</span>
+                            <div>
+                                <strong>Enhance Experience</strong>
+                                <p>We use your ratings to enhance customer satisfaction</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">🔧</span>
+                            <div>
+                                <strong>Maintenance Issues</strong>
+                                <p>Report any equipment problems for quick resolution</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">🎁</span>
+                            <div>
+                                <strong>Rewards Program</strong>
+                                <p>Leave feedback and earn loyalty points</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="recent-feedback">
+                        <h4>Recent Feedback</h4>
+                        <div class="feedback-item">
+                            <div class="feedback-header">
+                                <span class="feedback-user">Kamal Perera</span>
+                                <span class="feedback-rating">⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p class="feedback-text">Excellent service! Fast charging and clean station.</p>
+                            <span class="feedback-station">Colombo City Center</span>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-header">
+                                <span class="feedback-user">Sarath Suranjith</span>
+                                <span class="feedback-rating">⭐⭐⭐⭐</span>
+                            </div>
+                            <p class="feedback-text">Good experience, but wait time was a bit long.</p>
+                            <span class="feedback-station">Kandy City Center</span>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-header">
+                                <span class="feedback-user">Sahan Gunathilaka</span>
+                                <span class="feedback-rating">⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p class="feedback-text">Perfect! Will definitely use again.</p>
+                            <span class="feedback-station">One Galleface Mall</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+                    <p>Sri Lanka's smartest EV charging network. Find, book, and charge — all in one place.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="stations.html">Find Stations</a>
+                    <a href="booking.html">Book a Slot</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📧 hello@evconnect.lk</p>
+                    <p>📞 +94 75 396 6006</p>
+                    <p>📍 Colombo, Sri Lanka</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EvConnect. All rights reserved.</p>
+                <p>Made with ⚡ for Sri Lanka's EV revolution.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - EvConnect</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="stations.html">Find Stations</a>
+                <a href="booking.html">Book a Slot</a>
+                <a href="about.html">About Us</a>
+                <a href="admin-login.html" class="btn-nav">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="hero-bg">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+        </div>
+        <div class="container">
+            <span class="section-label">🔐 Admin</span>
+            <h1>Admin Portal</h1>
+            <p>Access the administrative dashboard to manage bookings and stations.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card admin-card">
+                    <div class="admin-badge">🛡️ Admin Access</div>
+                    <h2>Administrator Login</h2>
+                    <p class="auth-sub">Enter your admin credentials to access the dashboard</p>
+                    
+                    <form class="auth-form" id="adminLoginForm">
+                        <div class="form-group">
+                            <label>Admin Email</label>
+                            <input type="email" class="form-control" id="adminEmail" placeholder="admin@evconnect.lk" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="adminPassword" placeholder="Enter admin password" required>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="adminRemember">
+                                <span>Remember me on this device</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-full">Access Dashboard</button>
+                    </form>
+                    
+                    <div class="admin-security">
+                        <h4>🔒 Security Notice</h4>
+                        <p>This is a restricted area. Unauthorized access is prohibited and will be monitored. All admin actions are logged for security purposes.</p>
+                    </div>
+                    
+                    <p class="auth-footer">
+                        <a href="login.html" class="auth-link">← Back to Customer Login</a>
+                    </p>
+                </div>
+                
+                <div class="auth-info">
+                    <h3>Admin Dashboard Features</h3>
+                    <ul class="auth-benefits">
+                        <li>
+                            <span class="benefit-icon">📊</span>
+                            <div>
+                                <strong>View All Bookings</strong>
+                                <p>Monitor and manage all customer bookings</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">📈</span>
+                            <div>
+                                <strong>Analytics & Reports</strong>
+                                <p>Track usage statistics and revenue</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">⚡</span>
+                            <div>
+                                <strong>Station Management</strong>
+                                <p>Manage charging stations and ports</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">👥</span>
+                            <div>
+                                <strong>User Management</strong>
+                                <p>Manage customer accounts and access</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">🔔</span>
+                            <div>
+                                <strong>System Notifications</strong>
+                                <p>Receive alerts and system updates</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">⚙️</span>
+                            <div>
+                                <strong>Settings</strong>
+                                <p>Configure system preferences</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="admin-help">
+                        <p>Need admin access?</p>
+                        <a href="#" class="btn-ghost">Contact IT Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+                    <p>Sri Lanka's smartest EV charging network. Find, book, and charge — all in one place.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="stations.html">Find Stations</a>
+                    <a href="booking.html">Book a Slot</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📧 hello@evconnect.lk</p>
+                    <p>📞 +94 75 396 6006</p>
+                    <p>📍 Colombo, Sri Lanka</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EvConnect. All rights reserved.</p>
+                <p>Made with ⚡ for Sri Lanka's EV revolution.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

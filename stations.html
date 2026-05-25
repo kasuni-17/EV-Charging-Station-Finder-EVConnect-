@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Stations - EvConnect</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="stations.html" class="active">Find Stations</a>
+                <a href="booking.html">Book a Slot</a>
+                <a href="about.html">About Us</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="hero-bg">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+        </div>
+        <div class="container">
+            <span class="section-label">📍 Station Finder</span>
+            <h1>Find Charging Stations</h1>
+            <p>Discover EV charging stations across Sri Lanka. Filter by location, charger type, and availability.</p>
+        </div>
+    </div>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <div class="search-input-wrap">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search by location or station name...">
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option>All Types</option>
+                        <option>Fast Charger (50kW)</option>
+                        <option>Standard (22kW)</option>
+                        <option>Slow (7kW)</option>
+                    </select>
+                    <select class="filter-select">
+                        <option>All Status</option>
+                        <option>Available</option>
+                        <option>Busy</option>
+                        <option>Maintenance</option>
+                    </select>
+                    <select class="filter-select">
+                        <option>All Cities</option>
+                        <option>Colombo</option>
+                        <option>Kandy</option>
+                        <option>Galle</option>
+                        <option>Negombo</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Available Stations</h2>
+                <span class="section-label">12 stations found</span>
+            </div>
+            
+            <div class="stations-grid">
+                <div class="station-card">
+                    <div class="sc-top">
+                        <div class="sc-info">
+                            <h3>Colombo City Center</h3>
+                            <p>📍 No. 123, Union Place, Colombo 02</p>
+                        </div>
+                        <span class="sc-badge available">🟢 Available</span>
+                    </div>
+                    <div class="sc-connectors">
+                        <span class="conn">CCS2</span>
+                        <span class="conn">Type 2</span>
+                        <span class="conn">CHAdeMO</span>
+                    </div>
+                    <div class="sc-meta">
+                        <span>⚡ 50kW DC Fast</span>
+                        <span>🕐 24/7</span>
+                        <span>� Rs. 45/kWh</span>
+                    </div>
+                    <a href="booking.html" class="btn-book">Book Slot</a>
+                </div>
+
+                <div class="station-card">
+                    <div class="sc-top">
+                        <div class="sc-info">
+                            <h3>Kandy City Center</h3>
+                            <p>📍 Kandy City Center, Dalada Veediya</p>
+                        </div>
+                        <span class="sc-badge busy">🟡 Busy</span>
+                    </div>
+                    <div class="sc-connectors">
+                        <span class="conn">Type 2</span>
+                        <span class="conn">CCS2</span>
+                    </div>
+                    <div class="sc-meta">
+                        <span>⚡ 22kW AC</span>
+                        <span>🕐 8AM - 10PM</span>
+                        <span>� Rs. 35/kWh</span>
+                    </div>
+                    <a href="booking.html" class="btn-book">Book Slot</a>
+                </div>
+
+                <div class="station-card">
+                    <div class="sc-top">
+                        <div class="sc-info">
+                            <h3>One Galleface Mall</h3>
+                            <p>📍 Galle Road, Colombo 7</p>
+                        </div>
+                        <span class="sc-badge available">🟢 Available</span>
+                    </div>
+                    <div class="sc-connectors">
+                        <span class="conn">CCS2</span>
+                        <span class="conn">Type 2</span>
+                    </div>
+                    <div class="sc-meta">
+                        <span>⚡ 50kW DC Fast</span>
+                        <span>🕐 24/7</span>
+                        <span>💰 Rs. 45/kWh</span>
+                    </div>
+                    <a href="booking.html" class="btn-book">Book Slot</a>
+                </div>
+
+                <div class="station-card">
+                    <div class="sc-top">
+                        <div class="sc-info">
+                            <h3>Negombo Beach Road</h3>
+                            <p>📍 Lewis Place, Negombo</p>
+                        </div>
+                        <span class="sc-badge available">🟢 Available</span>
+                    </div>
+                    <div class="sc-connectors">
+                        <span class="conn">Type 2</span>
+                    </div>
+                    <div class="sc-meta">
+                        <span>⚡ 22kW AC</span>
+                        <span>🕐 6AM - 11PM</span>
+                        <span>💰 Rs. 35/kWh</span>
+                    </div>
+                    <a href="booking.html" class="btn-book">Book Slot</a>
+                </div>
+
+                <div class="station-card">
+                    <div class="sc-top">
+                        <div class="sc-info">
+                            <h3>Matale Highway Stop</h3>
+                            <p>📍 Kandy Road, Matale</p>
+                        </div>
+                        <span class="sc-badge available">🟢 Available</span>
+                    </div>
+                    <div class="sc-connectors">
+                        <span class="conn">CCS2</span>
+                        <span class="conn">CHAdeMO</span>
+                    </div>
+                    <div class="sc-meta">
+                        <span>⚡ 150kW Ultra Fast</span>
+                        <span>🕐 24/7</span>
+                        <span>💰 Rs. 55/kWh</span>
+                    </div>
+                    <a href="booking.html" class="btn-book">Book Slot</a>
+                </div>
+
+                <div class="station-card">
+                    <div class="sc-top">
+                        <div class="sc-info">
+                            <h3>Galle Fort</h3>
+                            <p>📍 Main Street, Galle</p>
+                        </div>
+                        <span class="sc-badge busy">🟡 Busy</span>
+                    </div>
+                    <div class="sc-connectors">
+                        <span class="conn">Type 2</span>
+                        <span class="conn">CCS2</span>
+                    </div>
+                    <div class="sc-meta">
+                        <span>⚡ 50kW DC Fast</span>
+                        <span>🕐 24/7</span>
+                        <span>💰 Rs. 45/kWh</span>
+                    </div>
+                    <a href="booking.html" class="btn-book">Book Slot</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-strip">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feat">
+                    <span class="feat-icon">⚡</span>
+                    <div>
+                        <h4>Fast Charging</h4>
+                        <p>Up to 150kW ultra-fast chargers available</p>
+                    </div>
+                </div>
+                <div class="feat">
+                    <span class="feat-icon">📍</span>
+                    <div>
+                        <h4>Wide Network</h4>
+                        <p>Stations located across major cities</p>
+                    </div>
+                </div>
+                <div class="feat">
+                    <span class="feat-icon">📱</span>
+                    <div>
+                        <h4>Easy Booking</h4>
+                        <p>Book your slot in advance via app</p>
+                    </div>
+                </div>
+                <div class="feat">
+                    <span class="feat-icon">💳</span>
+                    <div>
+                        <h4>Multiple Payment</h4>
+                        <p>Card, mobile wallet, or cash accepted</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+                    <p>Sri Lanka's smartest EV charging network. Find, book, and charge — all in one place.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="stations.html">Find Stations</a>
+                    <a href="booking.html">Book a Slot</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📧 hello@evconnect.lk</p>
+                    <p>📞 +94 75 396 6006</p>
+                    <p>📍 Colombo, Sri Lanka</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EvConnect. All rights reserved.</p>
+                <p>Made with ⚡ for Sri Lanka's EV revolution.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EvConnect – Smart EV Charging</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-bolt">⚡</span>EvConnect
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="stations.html">Find Stations</a></li>
+      <li><a href="booking.html">Book a Slot</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+    <a href="booking.html" class="btn-nav">Book Now</a>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="stations.html">Find Stations</a>
+    <a href="booking.html">Book a Slot</a>
+    <a href="about.html">About</a>
+    <a href="booking.html" class="btn-nav">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="pulse-dot"></span> 240+ Live Stations</div>
+    <h1 class="hero-title">
+      Charge Smarter,<br/>
+      <span class="gradient-text">Drive Further</span>
+    </h1>
+    <p class="hero-sub">Find available EV charging stations near you in real-time and book your slot in seconds. No waiting. No guessing.</p>
+    <div class="hero-cta">
+      <a href="stations.html" class="btn-primary">Find Stations Near Me</a>
+      <a href="booking.html" class="btn-ghost">Book a Slot →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">240+</span><span class="stat-label">Stations</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">12K+</span><span class="stat-label">Happy Drivers</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">99%</span><span class="stat-label">Uptime</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="station-card-float">
+      <div class="scf-header">
+        <div class="scf-icon">⚡</div>
+        <div>
+          <div class="scf-name">Colombo City Center</div>
+          <div class="scf-addr">Colombo 03</div>
+        </div>
+        <div class="scf-status available">Available</div>
+      </div>
+      <div class="scf-ports">
+        <div class="port-item active"><span>CCS2</span><span class="port-kw">150kW</span></div>
+        <div class="port-item active"><span>Type 2</span><span class="port-kw">22kW</span></div>
+        <div class="port-item busy"><span>CHAdeMO</span><span class="port-kw">50kW</span></div>
+      </div>
+      <div class="scf-bar">
+        <div class="scf-fill" style="width:66%"></div>
+      </div>
+      <div class="scf-foot">2 of 3 ports free · 0.8 km away</div>
+    </div>
+    <div class="charge-ring">
+      <svg viewBox="0 0 200 200" class="ring-svg">
+        <defs>
+          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#22c55e"/>
+            <stop offset="100%" stop-color="#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="80" class="ring-bg"/>
+        <circle cx="100" cy="100" r="80" class="ring-progress"/>
+      </svg>
+      <div class="ring-inner">
+        <div class="ring-pct">68%</div>
+        <div class="ring-label">Charging</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-it-works">
+  <div class="container">
+    <div class="section-label">Simple Process</div>
+    <h2 class="section-title">How EvConnect Works</h2>
+    <div class="steps-grid">
+      <div class="step-card" style="--d:0s">
+        <div class="step-num">01</div>
+        <div class="step-icon">🔍</div>
+        <h3>Find a Station</h3>
+        <p>Search stations by location, charger type, or availability. See real-time status and pricing instantly.</p>
+      </div>
+      <div class="step-card" style="--d:.1s">
+        <div class="step-num">02</div>
+        <div class="step-icon">📅</div>
+        <h3>Book Your Slot</h3>
+        <p>Reserve a charging slot up to 24 hours in advance. Pick your date, time, and preferred connector.</p>
+      </div>
+      <div class="step-card" style="--d:.2s">
+        <div class="step-num">03</div>
+        <div class="step-icon">⚡</div>
+        <h3>Plug In & Charge</h3>
+        <p>Arrive, scan the QR code, and start charging. Track progress from the app or website live.</p>
+      </div>
+      <div class="step-card" style="--d:.3s">
+        <div class="step-num">04</div>
+        <div class="step-icon">✅</div>
+        <h3>Pay & Go</h3>
+        <p>Seamless payment on completion. Get a digital receipt and charging summary instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED STATIONS -->
+<section class="section featured">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Near You</div>
+        <h2 class="section-title">Popular Stations</h2>
+      </div>
+      <a href="stations.html" class="btn-link">View All →</a>
+    </div>
+    <div class="stations-grid">
+      <div class="station-card">
+        <div class="sc-top">
+          <div class="sc-info">
+            <h3>Keells Supermarket</h3>
+            <p>Colombo 03 · 0.8 km</p>
+          </div>
+          <div class="sc-badge available">3 Available</div>
+        </div>
+        <div class="sc-connectors">
+          <span class="conn">CCS2</span><span class="conn">Type2</span><span class="conn">CHAdeMO</span>
+        </div>
+        <div class="sc-meta">
+          <span>⚡ Up to 150 kW</span>
+          <span>💰 LKR 45/kWh</span>
+          <span>⭐ 4.8</span>
+        </div>
+        <a href="booking.html" class="btn-book">Book Now</a>
+      </div>
+      <div class="station-card">
+        <div class="sc-top">
+          <div class="sc-info">
+            <h3>Havelock City Mall</h3>
+            <p>Park Street · 5.2 km</p>
+          </div>
+          <div class="sc-badge available">5 Available</div>
+        </div>
+        <div class="sc-connectors">
+          <span class="conn">CCS2</span><span class="conn">Type2</span>
+        </div>
+        <div class="sc-meta">
+          <span>⚡ Up to 100 kW</span>
+          <span>💰 LKR 40/kWh</span>
+          <span>⭐ 4.6</span>
+        </div>
+        <a href="booking.html" class="btn-book">Book Now</a>
+      </div>
+      <div class="station-card">
+        <div class="sc-top">
+          <div class="sc-info">
+            <h3>Marine Drive</h3>
+            <p>Galle Road · 1.4 km</p>
+          </div>
+          <div class="sc-badge busy">1 Available</div>
+        </div>
+        <div class="sc-connectors">
+          <span class="conn">Type2</span><span class="conn">CCS2</span>
+        </div>
+        <div class="sc-meta">
+          <span>⚡ Up to 50 kW</span>
+          <span>💰 LKR 42/kWh</span>
+          <span>⭐ 4.5</span>
+        </div>
+        <a href="booking.html" class="btn-book">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<section class="section features-strip">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feat"><div class="feat-icon">🛰️</div><div><h4>Real-time Availability</h4><p>Live updates every 30 seconds from all stations.</p></div></div>
+      <div class="feat"><div class="feat-icon">🔒</div><div><h4>Secure Booking</h4><p>Your slot is guaranteed once confirmed.</p></div></div>
+      <div class="feat"><div class="feat-icon">📱</div><div><h4>Works on Any Device</h4><p>Fully responsive — phone, tablet, or desktop.</p></div></div>
+      <div class="feat"><div class="feat-icon">💳</div><div><h4>Easy Payments</h4><p>Pay via card, wallet, or online banking.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Ready to charge your EV?</h2>
+    <p>Join 12,000+ drivers already using EvConnect across Sri Lanka.</p>
+    <div class="cta-btns">
+      <a href="stations.html" class="btn-primary">Find a Station</a>
+      <a href="about.html" class="btn-ghost-dark">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">⚡EvConnect</a>
+        <p>Sri Lanka's smartest EV charging network. Find, book, and charge — all in one place.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="stations.html">Find Stations</a>
+        <a href="booking.html">Book a Slot</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📧 hello@evconnect.lk</p>
+        <p>📞 +94 75 396 6006</p>
+        <p>📍 Colombo, Sri Lanka</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EvConnect. All rights reserved.</p>
+      <p>Made with ⚡ for Sri Lanka's EV revolution.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

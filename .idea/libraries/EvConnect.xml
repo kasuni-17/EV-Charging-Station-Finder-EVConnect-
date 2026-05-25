@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="EvConnect">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/EvConnect.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

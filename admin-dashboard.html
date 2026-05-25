@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - EvConnect</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+            <div class="nav-links">
+                <a href="admin-dashboard.html" class="active">Dashboard</a>
+                <a href="stations.html">Stations</a>
+                <a href="#" class="btn-nav">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="hero-bg">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+        </div>
+        <div class="container">
+            <span class="section-label">📊 Dashboard</span>
+            <h1>Admin Dashboard</h1>
+            <p>Manage bookings, monitor stations, and track performance.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-info">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Total Bookings</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <div class="stat-number">42</div>
+                        <div class="stat-label">Active Sessions</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <div class="stat-number">Rs. 125K</div>
+                        <div class="stat-label">Today's Revenue</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📍</div>
+                    <div class="stat-info">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Active Stations</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="dashboard-main">
+                    <div class="section-header">
+                        <h2 class="section-title">Recent Bookings</h2>
+                        <div class="dashboard-actions">
+                            <input type="text" class="search-input" placeholder="Search bookings...">
+                            <select class="filter-select">
+                                <option>All Status</option>
+                                <option>Confirmed</option>
+                                <option>In Progress</option>
+                                <option>Completed</option>
+                                <option>Cancelled</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bookings-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Booking ID</th>
+                                    <th>Customer</th>
+                                    <th>Station</th>
+                                    <th>Date & Time</th>
+                                    <th>Connector</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="booking-id">EVC-ABC123</span></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <span class="customer-name">Kasuni Attygala</span>
+                                            <span class="customer-email">kasuni@email.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Colombo City Center</td>
+                                    <td>May 26, 2025<br>11:00 AM</td>
+                                    <td>CCS2 (50kW)</td>
+                                    <td><span class="status-badge confirmed">Confirmed</span></td>
+                                    <td>Rs. 45.00</td>
+                                    <td>
+                                        <button class="action-btn view">View</button>
+                                        <button class="action-btn edit">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="booking-id">EVC-DEF456</span></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <span class="customer-name">Udara Hettigedara</span>
+                                            <span class="customer-email">udara@email.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Kandy City Center</td>
+                                    <td>May 26, 2025<br>2:00 PM</td>
+                                    <td>Type 2 (22kW)</td>
+                                    <td><span class="status-badge in-progress">In Progress</span></td>
+                                    <td>Rs. 35.00</td>
+                                    <td>
+                                        <button class="action-btn view">View</button>
+                                        <button class="action-btn edit">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="booking-id">EVC-GHI789</span></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <span class="customer-name">Shashin Fernando</span>
+                                            <span class="customer-email">shashin@email.com</span>
+                                        </div>
+                                    </td>
+                                    <td>One Galleface Mall</td>
+                                    <td>May 26, 2025<br>3:00 PM</td>
+                                    <td>CCS2 (50kW)</td>
+                                    <td><span class="status-badge confirmed">Confirmed</span></td>
+                                    <td>Rs. 45.00</td>
+                                    <td>
+                                        <button class="action-btn view">View</button>
+                                        <button class="action-btn edit">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="booking-id">EVC-JKL012</span></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <span class="customer-name">Dasuni Silva</span>
+                                            <span class="customer-email">dasuni@email.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Negombo Beach Road</td>
+                                    <td>May 25, 2025<br>10:00 AM</td>
+                                    <td>Type 2 (22kW)</td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                    <td>Rs. 35.00</td>
+                                    <td>
+                                        <button class="action-btn view">View</button>
+                                        <button class="action-btn edit">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="booking-id">EVC-MNO345</span></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <span class="customer-name">Ravi Kumar</span>
+                                            <span class="customer-email">ravi@email.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Matale Highway Stop</td>
+                                    <td>May 25, 2025<br>1:00 PM</td>
+                                    <td>CHAdeMO (50kW)</td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                    <td>Rs. 45.00</td>
+                                    <td>
+                                        <button class="action-btn view">View</button>
+                                        <button class="action-btn edit">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="booking-id">EVC-PQR678</span></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <span class="customer-name">Sarah Perera</span>
+                                            <span class="customer-email">sarah@email.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Galle Fort</td>
+                                    <td>May 24, 2025<br>4:00 PM</td>
+                                    <td>CCS2 (50kW)</td>
+                                    <td><span class="status-badge cancelled">Cancelled</span></td>
+                                    <td>Rs. 45.00</td>
+                                    <td>
+                                        <button class="action-btn view">View</button>
+                                        <button class="action-btn edit">Edit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="page-btn">← Previous</button>
+                        <span class="page-info">Page 1 of 10</span>
+                        <button class="page-btn">Next →</button>
+                    </div>
+                </div>
+
+                <div class="dashboard-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Quick Actions</h3>
+                        <div class="quick-actions">
+                            <a href="#" class="quick-action">
+                                <span class="action-icon">➕</span>
+                                <span>Add New Station</span>
+                            </a>
+                            <a href="#" class="quick-action">
+                                <span class="action-icon">📊</span>
+                                <span>Generate Report</span>
+                            </a>
+                            <a href="#" class="quick-action">
+                                <span class="action-icon">👥</span>
+                                <span>Manage Users</span>
+                            </a>
+                            <a href="#" class="quick-action">
+                                <span class="action-icon">⚙️</span>
+                                <span>Settings</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Station Status</h3>
+                        <div class="station-status-list">
+                            <div class="station-status-item">
+                                <span class="station-name">Colombo City Center</span>
+                                <span class="status-dot online"></span>
+                            </div>
+                            <div class="station-status-item">
+                                <span class="station-name">Kandy City Center</span>
+                                <span class="status-dot online"></span>
+                            </div>
+                            <div class="station-status-item">
+                                <span class="station-name">One Galleface Mall</span>
+                                <span class="status-dot online"></span>
+                            </div>
+                            <div class="station-status-item">
+                                <span class="station-name">Negombo Beach Road</span>
+                                <span class="status-dot online"></span>
+                            </div>
+                            <div class="station-status-item">
+                                <span class="station-name">Matale Highway Stop</span>
+                                <span class="status-dot maintenance"></span>
+                            </div>
+                            <div class="station-status-item">
+                                <span class="station-name">Galle Fort</span>
+                                <span class="status-dot online"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Recent Feedback</h3>
+                        <div class="feedback-list" id="adminFeedbackList">
+                            <div class="feedback-item">
+                                <div class="feedback-header">
+                                    <span class="feedback-user">Kasuni A.</span>
+                                    <span class="feedback-rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <p class="feedback-text">Excellent service! Fast charging and clean station.</p>
+                                <span class="feedback-station">Colombo City Center</span>
+                            </div>
+                            <div class="feedback-item">
+                                <div class="feedback-header">
+                                    <span class="feedback-user">Udara H.</span>
+                                    <span class="feedback-rating">⭐⭐⭐⭐</span>
+                                </div>
+                                <p class="feedback-text">Good experience, but wait time was a bit long.</p>
+                                <span class="feedback-station">Kandy City Center</span>
+                            </div>
+                            <div class="feedback-item">
+                                <div class="feedback-header">
+                                    <span class="feedback-user">Shashin F.</span>
+                                    <span class="feedback-rating">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <p class="feedback-text">Perfect! Will definitely use again.</p>
+                                <span class="feedback-station">One Galleface Mall</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <span class="activity-time">2 min ago</span>
+                                <span class="activity-text">New booking: EVC-ABC123</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-time">15 min ago</span>
+                                <span class="activity-text">Station 3 completed charging</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-time">1 hour ago</span>
+                                <span class="activity-text">User registered: dasuni@email.com</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-time">2 hours ago</span>
+                                <span class="activity-text">Booking cancelled: EVC-PQR678</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><span class="logo-bolt">⚡</span>EvConnect</a>
+                    <p>Sri Lanka's smartest EV charging network. Find, book, and charge — all in one place.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="stations.html">Find Stations</a>
+                    <a href="booking.html">Book a Slot</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📧 hello@evconnect.lk</p>
+                    <p>📞 +94 75 396 6006</p>
+                    <p>📍 Colombo, Sri Lanka</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EvConnect. All rights reserved.</p>
+                <p>Made with ⚡ for Sri Lanka's EV revolution.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Edit Booking Modal -->
+    <div class="modal-overlay" id="editBookingModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Edit Booking</h2>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <form class="modal-form" id="editBookingForm">
+                <input type="hidden" id="editBookingId">
+                <div class="form-group">
+                    <label>Customer Name</label>
+                    <input type="text" class="form-control" id="editCustomerName" required>
+                </div>
+                <div class="form-group">
+                    <label>Station</label>
+                    <select class="form-control" id="editStation" required>
+                        <option value="Colombo City Center">Colombo City Center</option>
+                        <option value="Kandy City Center">Kandy City Center</option>
+                        <option value="One Galleface Mall">One Galleface Mall</option>
+                        <option value="Negombo Beach Road">Negombo Beach Road</option>
+                        <option value="Matale Highway Stop">Matale Highway Stop</option>
+                        <option value="Galle Fort">Galle Fort</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" class="form-control" id="editDateTime" required>
+                </div>
+                <div class="form-group">
+                    <label>Connector</label>
+                    <select class="form-control" id="editConnector" required>
+                        <option value="CCS2 (50kW)">CCS2 (50kW)</option>
+                        <option value="Type 2 (22kW)">Type 2 (22kW)</option>
+                        <option value="CHAdeMO (50kW)">CHAdeMO (50kW)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select class="form-control" id="editStatus" required>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Amount (Rs.)</label>
+                    <input type="number" class="form-control" id="editAmount" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-ghost" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Booking Modal -->
+    <div class="modal-overlay" id="deleteBookingModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Delete Booking</h2>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-content">
+                <p>Are you sure you want to delete this booking? This action cannot be undone.</p>
+                <div class="booking-details" id="deleteBookingDetails"></div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-ghost" onclick="closeModal()">Cancel</button>
+                    <button type="button" class="btn-primary" id="confirmDeleteBtn" style="background: #ef4444;">Delete Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Booking Modal -->
+    <div class="modal-overlay" id="viewBookingModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Booking Details</h2>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-content">
+                <div class="booking-details" id="viewBookingDetails"></div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-primary" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
