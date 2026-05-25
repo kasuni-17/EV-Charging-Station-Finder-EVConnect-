@@ -97,7 +97,8 @@ Users can:
 
 📸 System Screenshots
 Home Page
-<img src="images/image.png" width="400">
+<img width="697" height="485" alt="image" src="https://github.com/user-attachments/assets/7aedbaa3-6d0e-4686-94eb-ea387d475775" />
+
 
 Charging Stations
 <img src="images/image-1.png" width="400">
