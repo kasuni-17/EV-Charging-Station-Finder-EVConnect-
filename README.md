@@ -1,6 +1,7 @@
 ## ⚡ EV Charging Station Finder –(EVConnect)
 
 EVConnect Finder is a smart web-based EV Charging Station Finder system that helps electric vehicle users locate nearby charging stations, check charger availability, reserve charging slots, and monitor charging status in real time.
+--------------------------------------------------
 <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/d1408b85-8a09-4c11-b4ed-70296df16041" />
 
 
@@ -98,8 +99,9 @@ Users can:
 
 📸 System Screenshots
 Home Page
+--
 <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/7aedbaa3-6d0e-4686-94eb-ea387d475775" />
-
+---
 
 Charging Stations
 <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/dabb5d5c-e58c-486d-bb2f-a38bef61440d" />
