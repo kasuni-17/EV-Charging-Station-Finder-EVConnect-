@@ -145,12 +145,6 @@ OR<br>
 
 ---
 
-5️⃣ Run the Project<br>
-Start the Tomcat Server and open:<br>
-http://localhost:5000/EVConnectFinder<br>
-
----
-
 🌟 Future Improvements<br>
 • AI-Based Charger Recommendation<br>
 • Real-Time Live Charging Updates<br>
